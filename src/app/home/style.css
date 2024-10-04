@@ -1,0 +1,184 @@
+.prose {
+    max-width: 65ch;
+    color: var(--tw-prose-body);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  
+  .prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~="not-prose"] *)) {
+    color: var(--tw-prose-headings);
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  
+  .prose :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2.25em;
+    margin-top: 0;
+    margin-bottom: 0.8888889em;
+    line-height: 1.1111111;
+  }
+  
+  .prose :where(h2):not(:where([class~="not-prose"] *)) {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    line-height: 1.3333333;
+  }
+  
+  .prose :where(h3):not(:where([class~="not-prose"] *)) {
+    font-size: 1.25em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+  }
+  
+  .prose :where(h4):not(:where([class~="not-prose"] *)) {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+  }
+  
+  .prose :where(img):not(:where([class~="not-prose"] *)) {
+    display: inline-block;
+    margin: 1em;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+  
+  .prose :where(figure > *):not(:where([class~="not-prose"] *)) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .prose :where(figcaption):not(:where([class~="not-prose"] *)) {
+    color: var(--tw-prose-captions);
+    font-size: 0.875em;
+    line-height: 1.4285714;
+    margin-top: 0.8571429em;
+  }
+  
+  .prose :where(code):not(:where([class~="not-prose"] *)) {
+    color: var(--tw-prose-code);
+    font-weight: 600;
+    font-size: 0.875em;
+  }
+  
+  .prose :where(a):not(:where([class~="not-prose"] *)) {
+    color: var(--tw-prose-links);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  .prose :where(strong):not(:where([class~="not-prose"] *)) {
+    color: var(--tw-prose-bold);
+    font-weight: 600;
+  }
+  
+  .prose :where(ol):not(:where([class~="not-prose"] *)) {
+    list-style-type: decimal;
+    padding-left: 1.625em;
+  }
+  
+  .prose :where(ul):not(:where([class~="not-prose"] *)) {
+    list-style-type: disc;
+    padding-left: 1.625em;
+  }
+  
+  .prose :where(li):not(:where([class~="not-prose"] *)) {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Improved table styles */
+  .prose :where(table):not(:where([class~="not-prose"] *)) {
+    width: 100%;
+    table-layout: auto;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 0.875em;
+    line-height: 1.7142857;
+    border-collapse: collapse;
+    background-color: #f8f9fa; /* Light background for the whole table */
+  }
+  
+  /* Light mode table styles */
+.prose :where(table):not(:where([class~="not-prose"] *)) {
+    width: 100%;
+    table-layout: auto;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 0.875em;
+    line-height: 1.7142857;
+    border-collapse: collapse;
+    background-color: #f8f9fa; /* Light background for table */
+  }
+  
+  .prose :where(thead):not(:where([class~="not-prose"] *)) {
+    background-color: #343a40; /* Dark header for contrast */
+    color: #fff; /* White text in header */
+    border-bottom-width: 1px;
+    border-bottom-color: #495057; /* Lighter border for separation */
+  }
+  
+  .prose :where(tbody tr:nth-child(even)):not(:where([class~="not-prose"] *)) {
+    background-color: #e9ecef; /* Alternating light row colors */
+  }
+  
+  .prose :where(tbody tr:hover):not(:where([class~="not-prose"] *)) {
+    background-color: #f1f3f5; /* Hover effect for light mode */
+  }
+  
+  .prose :where(tbody td):not(:where([class~="not-prose"] *)) {
+    padding: 0.75em;
+    vertical-align: baseline;
+  }
+  
+  /* Dark mode table styles */
+  .prose-invert :where(table):not(:where([class~="not-prose"] *)) {
+    background-color: #1e1e1e; /* Dark background for table */
+  }
+  
+  .prose-invert :where(thead):not(:where([class~="not-prose"] *)) {
+    background-color: #3a3a3a; /* Slightly lighter dark for thead */
+    color: #e0e0e0; /* Light text for readability */
+  }
+  
+  .prose-invert :where(tbody tr):not(:where([class~="not-prose"] *)) {
+    border-bottom-color: #2c2c2c; /* Border in dark mode */
+  }
+  
+  .prose-invert :where(tbody tr:nth-child(even)):not(:where([class~="not-prose"] *)) {
+    background-color: #2b2b2b; /* Alternating darker background rows */
+  }
+  
+  .prose-invert :where(tbody tr:hover):not(:where([class~="not-prose"] *)) {
+    background-color: #333333; /* Hover effect in dark mode */
+  }
+  
+  .prose-invert :where(tbody td):not(:where([class~="not-prose"] *)) {
+    color: #d4d4d4; /* Light text inside table cells for readability */
+  }
+
+ 
+
+  
+  /* Inverted colors for dark mode */
+  .prose-invert {
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #fff;
+    --tw-prose-links: #60a5fa;
+    --tw-prose-bold: #fff;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #4b5563;
+    --tw-prose-hr: #374151;
+    --tw-prose-quote-borders: #4b5563;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-code: #fff;
+    --tw-prose-th-borders: #4b5563;
+    --tw-prose-td-borders: #374151;
+  }
+  
