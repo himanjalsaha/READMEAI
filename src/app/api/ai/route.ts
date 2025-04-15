@@ -19,9 +19,9 @@ export async function POST(req: Request) {
   
     const chatCompletion = await groq.chat.completions.create({
         messages: [{ role: 'user', content: prompt }],
-        model: 'deepseek-r1-distill-llama-70b',
+        model: 'llama3-70b-8192',
         temperature: 0.4, // Further reduced temperature for more consistent output
-        max_tokens: 4096, // Increased max tokens to allow for more complex responses
+        max_tokens: 1024, // Increased max tokens to allow for more complex responses
         top_p: 1,
         stream: false,
       });
